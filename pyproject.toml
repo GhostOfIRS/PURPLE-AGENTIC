@@ -1,0 +1,11 @@
+[project]
+name = "nexusguard-ai"
+version = "0.1.0"
+description = "Defensive security assessment workflow centered on src/nexus.py."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "requests>=2.31.0",
+    "dnspython>=2.4.0",
+]
+

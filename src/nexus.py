@@ -236,7 +236,7 @@ def dns_recon(target):
     try:
         import dns.resolver
     except ImportError:
-        print(f"  {C.YELLOW}[SKIP] dnspython not installed. Run: pip install dnspython --break-system-packages{C.RESET}")
+        print(f"  {C.YELLOW}[SKIP] dnspython not installed. Run: uv sync{C.RESET}")
         return
 
     record_types = ["A", "AAAA", "MX", "NS", "TXT", "CNAME", "SOA"]
@@ -841,7 +841,7 @@ def generate_report(target, ip, reviewed):
 # ============================================================
 
 def main():
-    os.system("clear")
+    os.system("cls" if os.name == "nt" else "clear")
     print(C.CYAN + BANNER + C.RESET)
 
     target = input(f"{C.BOLD}  Enter target domain/IP: {C.RESET}").strip()
